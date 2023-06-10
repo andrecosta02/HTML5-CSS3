@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Listas</title>
+</head>
+<body>
+    <h1>Trabalhando com Listas</h1>
+    <h2>Listas Ordenadas</h2>
+    <p>São caracterizadas pela tag &lt;ol&gt; (Order List).</p>
+    <p>Podendo ser dos seguintes Type:</p>
+    <pre>
+    'a' indica letras minúsculas,
+    'A' indica letras maiúsculas,
+    'i' indica algarismos romanos minúsculos,
+    'I' indica algarismos romanos maiúsculos,
+    '1' indica números (padrão).
+
+    Dentro da tag &lt;ol&gt; pode conter o seguinte parâmetro> <code>start="10"</code> 
+    onde diz que a sequência começará pelo número desajado.
+    </pre>
+    <ol type="1">
+        <li>Acordar
+        <li>Ligar para o João</li>
+        <li>Tomar café</li>
+        <li>Escovar os dentes</li>
+        <li>Ir para a faculdade</li>
+        <li>Almoçar</li>
+        <li>Ir para o trabalho</li>
+        <li>Voltar pra casas</li>
+        <li>Jantar</li>
+        <li>Dormir</li>
+    </ol>
+
+
+    <h2>Listas não ordenadas</h2>
+    <p>São caracterizadas pela tag &lt;ul&gt; (Unordered List).</p> 
+    <p>Podendo ser dos tipos: (<code>type="disc", type="circle" ou type="square"</code>)</p>
+    <ul type="disc">
+        <li>Pão</li>
+        <li>Leite</li>
+        <li>Tomate</li>
+        <li>Manteiga</li>
+        <li>Arroz</li>
+        <li>Feijão</li>
+    </ul>
+
+    <h2>Minhas Linguagens Favoritas</h2>
+    <ol>
+        <li>Antigas</li>
+        <ol type="a">
+            <li>Clipper</li>
+            <li>Visual Basic</li>
+            <li>Fortran</li>
+            <li>Delphi</li>
+        </ol>
+
+        <li>Novas</li>
+        <ol type="a" start="5">
+            <li>PHP</li>
+            
+            <li>Phyton</li>
+            <li>JavaScipt</li>
+            <li>Kotlin</li>
+        </ol>
+    </ol>
+
+
+    <h2>Meus Jogos Favoritos</h2>
+    <ol>
+        <li>NES</li>
+        <ul type="square">
+            <li>Mario Bros</li>
+            <ul type="circle">
+                <li>Mario Bros 3</li>
+                <li>Mario: Lost Levels</li>
+            </ul>
+            <li>Ninja Gaiden</li>
+        </ul>
+
+        <li>SNES</li>
+        <ul type="square">
+            <li>Mario</li>
+            <li>Donkey Kong</li>
+        </ul>
+
+        <li>PlayStation</li>
+        <ul type="square">
+            <li>Final Fantasy</li>
+            <li>Castlevania</li>
+        </ul>
+    </ol>
+
+
+    <h2>Lista de Definições</h2>
+    <dl>
+      <dt>HTML</dt>
+      <dd>Linguagem de marcação para a criação do conteúdo de um site.</dd>
+      <br>
+
+      <dt>CSS</dt>
+      <dd>Linguagem de marcação para a criação do design de um site.</dd>
+      <br>
+      
+      <dt>JavaScipt</dt>
+      <dd>Linguagem de programação para a criação do interatividade de um site.</dd>  
+    </dl>
+
+    <h2 style="font-size: 20px;">Obs: Cada item da lista deve estar nas tags &lt;li&gt; (List Item) e ela não precisa ser fechada.</h2>
+</body>
+</html>

@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Impressoras</title>
+    <link rel="shortcut icon" href="Logo/LOGO PRESERVE.png" type="image/x-icon">
+    <style>
+        body{
+            font-family: Arial, Helvetica, sans-serif;
+            background-color: rgb(76, 128, 174);
+        }
+        h1 {
+            color: aliceblue;
+        }
+        p{
+            color: aliceblue;
+        }
+        a {
+            color: aliceblue;
+        }
+        #List {
+            display: none;
+            color: aliceblue;
+        }
+        .DivTest:hover > #List {
+            display: block;
+            width: 200px;
+        }
+        .DivTest {
+            background-color: rgb(9, 15, 205);
+            width: 100px;
+            height: auto;
+        }
+        ul {
+            padding-left: 0px;
+            padding-top: 0px;
+            list-style-image: url('Logo/impressora.png');
+        }
+        li {
+            padding-top: 0px;
+            text-decoration: none;
+        }
+        li::before {
+            content: "";
+            display: inline-block;
+            width: 10px; /* largura do ícone */
+            height: 10px; /* altura do ícone */
+            background-image: url('Logo/impressora.png');
+            background-size: cover;
+            margin-right: 10px; /* espaçamento entre o ícone e o texto do item */
+        }
+
+
+
+
+    </style>
+</head>
+<body>
+    <h1>Impressoras Preserve</h1>
+
+    <div class="DivTest">
+        <p>Recife</p>
+            <ul id="List">
+                <li><a href="http://192.168.10.226/">Auditoria</a></li>
+                <li><a href="http://192.168.10.212/">Faturamento</a></li>
+            </ul>
+    </div>
+    
+    <div class="DivTest">
+        <p>João Pessoa</p>
+            <ul id="List">
+                <li><a href="https:\google.com\">Google</a></li>
+                
+                <li><a href="https:\google.com\">Google</a></li>
+            </ul>
+    </div> 
+
+
+
+    
+
+    <script>
+        var links = document.getElementsByTagName('a');
+        for (var i = 0; i < links.length; i++) {
+          links[i].setAttribute('target', '_blank');
+        }
+      </script>
+</body>
+</html>

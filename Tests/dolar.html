@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Valor do Dólar</title>
+  </head>
+  <body>
+    <h1>Valor do Dólar</h1>
+    <p>O valor atual do dólar é:</p>
+    <p id="dolar"></p>
+    <script>
+      let url = 'https://free.currconv.com/api/v7/convert?q=USD_BRL&compact=ultra&apiKey=YOUR_API_KEY';
+      fetch(url)
+        .then(response => response.json())
+        .then(data => {
+          let dolar = data.USD_BRL;
+          let dolarElement = document.getElementById('dolar');
+          dolarElement.innerHTML = `R$ ${dolar.toFixed(2)}`;
+        })
+        .catch(error => console.error(error));
+    </script>
+  </body>
+</html>

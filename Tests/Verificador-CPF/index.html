@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Verificador de CPF</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <section id="formulario">
+        <h1>Verificador de CPF</h1>
+        <p class="gradient-text">......</p>
+
+        <!-- <p id="pisca">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Illum labore earum reiciendis enim quis minus aliquam fuga. Eligendi aut illo voluptatibus tempora esse. Sequi ipsum fugiat minima ullam, similique a.</p> -->
+
+
+        <form action="" method="get" id="myForm" autocomplete="on">
+            <p>
+                <label for="iname">Nome: </label>
+                <input type="text" name="iname" id="iname" class="inputText" minlength="3" max="15" placeholder="Digite o seu nome" required>
+            </p>
+
+            <p>
+                <label for="icpf">CPF: </label>
+                <input type="text" id="icpf" name="icpf" class="inputText" pattern="\d{3}\.\d{3}\.\d{3}-\d{2}" placeholder="Digite o CPF" required>
+            </p>
+
+            <p>
+                <input class="button" type="submit" value="Enviar" onclick="verificar();">
+                
+                <input class="button" type="reset" value="Limpar">
+            </p>
+        </form>
+        <br>
+
+        <div id="res"></div>
+    </section>
+
+    <script src="cpf.js"></script>
+</body>
+</html>

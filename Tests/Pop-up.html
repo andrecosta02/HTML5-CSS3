@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Exemplo de Pop-up</title>
+	<style>
+		/* estilo do pop-up */
+		.popup {
+			display: none;
+			position: fixed;
+			top: 50%;
+			left: 50%;
+			transform: translate(-50%, -50%);
+			background-color: #fff;
+			padding: 20px;
+			border: 1px solid #000;
+			box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+			z-index: 9999;
+		}
+	</style>
+</head>
+<body>
+
+	<h1>Bem-vindo ao meu site!</h1>
+
+	<button onclick="mostrarPopup()">Clique aqui para ver o pop-up</button>
+
+	<div class="popup" id="meuPopUp">
+		<h2>Este é o meu pop-up!</h2>
+		<p>Este é um exemplo de pop-up usando HTML, CSS e JavaScript.</p>
+		<button onclick="fecharPopup()">Fechar</button>
+	</div>
+
+	<script>
+		// função para mostrar o pop-up
+		function mostrarPopup() {
+			document.getElementById("meuPopUp").style.display = "block";
+		}
+
+		// função para fechar o pop-up
+		function fecharPopup() {
+			document.getElementById("meuPopUp").style.display = "none";
+		}
+	</script>
+
+</body>
+</html>
