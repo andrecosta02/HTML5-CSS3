@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Carrossel de Imagens</title>
+    <style>
+        .slideshow-container {
+            width: 200px;
+            height: 300px; /* Defina a altura desejada */
+            overflow: hidden;
+            /* background-color: #007bff; */
+
+            left: 50%;
+            top: 200px;
+            position: relative;
+            transform: translate(-50%, -50%);
+            padding-bottom: 10px;
+
+        }
+
+        .slide {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            opacity: 0;
+            transition: opacity 0.5s ease-in-out;
+
+        }
+
+        .slide.active {
+            opacity: 1;
+            box-shadow: 5px 5px 5px black;
+
+        }
+
+        .controls {
+            display: flex;
+            justify-content: center;
+            margin-top: 10px;
+        }
+
+        .controls button {
+            margin: 0 5px;
+            padding: 5px 10px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+
+        .progress-bar {
+            width: 50%;
+            height: 10px;
+            margin: auto;
+            background-color: #ddd;
+            /* margin-bottom: 10px; */
+        }
+
+        .progress-bar-fill {
+            height: 100%;
+            background-color: #007bff;
+            width: 0%;
+            transition: width 0.5s ease-in-out;
+        }
+    </style>
+</head>
+<body>
+    <div class="slideshow-container">
+        <div class="slide active">
+            <img src="imagens/icon-pc.png" alt="Imagem 1">
+        </div>
+        <div class="slide">
+            <img src="imagens/icon-phone.png" alt="Imagem 2">
+        </div>
+        <div class="slide">
+            <img src="imagens/icon-print.png" alt="Imagem 3">
+        </div>
+        <div class="slide">
+            <img src="imagens/icon-tablet.png" alt="Imagem 4">
+        </div>
+        <div class="slide">
+            <img src="imagens/icon-tv.png" alt="Imagem 5">
+        </div>
+    </div>
+
+    <div class="progress-bar">
+        <div class="progress-bar-fill"></div>
+    </div>
+
+    <div class="controls">
+        <button id="prevButton">Anterior</button>
+        <button id="pauseButton">Pausar</button>
+        <button id="nextButton">Próximo</button>
+    </div>
+
+
+    
+    <script>
+        var slides = document.querySelectorAll('.slide');
+var progressBarFill = document.querySelector('.progress-bar-fill');
+var currentSlide = 0;
+var intervalId;
+
+function showSlide() {
+    slides[currentSlide].classList.remove('active');
+    currentSlide = (currentSlide + 1) % slides.length;
+    slides[currentSlide].classList.add('active');
+    updateProgressBar();
+}
+
+function updateProgressBar() {
+    var progress = (currentSlide / (slides.length - 1)) * 100;
+    progressBarFill.style.width = progress + '%';
+}
+
+function startSlideshow() {
+    intervalId = setInterval(showSlide, 2000);
+}
+
+function pauseSlideshow() {
+    clearInterval(intervalId);
+}
+
+function prevSlide() {
+    slides[currentSlide].classList.remove('active');
+    currentSlide = (currentSlide - 1 + slides.length) % slides.length;
+    slides[currentSlide].classList.add('active');
+    updateProgressBar();
+}
+
+function nextSlide() {
+    slides[currentSlide].classList.remove('active');
+    currentSlide = (currentSlide + 1) % slides.length;
+    slides[currentSlide].classList.add('active');
+    updateProgressBar();
+}
+
+document.getElementById('prevButton').addEventListener('click', prevSlide);
+document.getElementById('pauseButton').addEventListener('click', pauseSlideshow);
+document.getElementById('nextButton').addEventListener('click', nextSlide);
+
+startSlideshow();
+
+    </script>
+</body>
+</html>
