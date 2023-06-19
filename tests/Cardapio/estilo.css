@@ -1,40 +1,50 @@
+@import url('https://fonts.googleapis.com/css2?family=Kaushan+Script&display=swap');
+
 * {
     margin: 0px;
     padding: 0px;
 }
 
 body {
-    background: rgb(70, 142, 236);
-    /*background: rgb(0, 0, 0);*/
+    background-color: rgb(70, 142, 236);
     font: normal 15pt Arial;
+    transition: background-color 1s;
 }
 
 header {
     color: white;
     text-align: center;
-    justify-content: space-between;
+    font-family: 'Kaushan Script', cursive;
+    font-size: 1.5em;
 }
 
-section {
-    background: white;
+
+.card {
+    background-color: rgb(32, 85, 154);
+    width: 90vw;
+    min-height: 100px;
     border-radius: 10px;
-    padding: 15px;
-    width: 300px;
     margin: auto;
-    text-align: left;
-    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.6);
-}
-
-
-.item {
-    background-color: green;
-    width: 340px;
-    border-radius: 10px;
+    margin-top: 10px;
+    padding: 5px;
+    color: white;
 }
 
 .foto {
-    width: 100px;
+    height: 100px;
+    border-radius: 10px 0px 0px 10px;
+    padding-right: 10px;
 }
+
+
+section.card > div.divFoto {
+    float: left;
+}
+
+
+
+
+
 
 
 
@@ -45,6 +55,7 @@ input[type="checkbox"] {
 }
 
 .dark, .dark header {
+    transition: background-color 1s;
     background-color: #000000;
 }
 
@@ -64,3 +75,5 @@ input[type="checkbox"] {
 .dark .bi-moon {
     display: block;
 }
+/* DarkMode */
+

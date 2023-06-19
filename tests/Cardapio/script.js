@@ -1,68 +1,61 @@
-const list = [
-    {
+let ShoppingBag = document.getElementById('ShoppingBag')
+
+
+const list = [{
         id: 1,
-        Product: "Banana",
-        Price: 2,
-        Quantity: 1,
-        Unit: "Palmas",
-        QttLower: "",
-        QttSum: "",
+        product: "Lasanha",
+        path: "imagens/lasanha.jpg",
+        description: "Lorem ipsum dolor sit amet consectetur, adipisicing elit.",
+        price: 2,
+
     },
     {
         id: 2,
-        Product: "Abacaxi",
-        Price: 2.5,
-        Quantity: 2,
-        Unit: "Unidades",
-        QttLower: "",
-        QttSum: "",
+        product: "Macarrão",
+        path: "imagens/lasanha.jpg",
+        description: "Lorem ipsum dolor sit amet consectetur, adipisicing elit.",
+        price: 2,
     },
     {
         id: 3,
-        Product: "Pera",
-        Price: 5,
-        Quantity: 3,
-        Unit: "Quilos",
-        QttLower: "",
-        QttSum: "",
+        product: "Lasanha",
+        path: "imagens/lasanha.jpg",
+        description: "Lorem ipsum dolor sit amet consectetur, adipisicing elit.",
+        price: 2,
     },
     {
         id: 3,
-        Product: "Laranja",
-        Price: 3,
-        Quantity: 3,
-        Unit: "Quilos",
-        QttLower: "",
-        QttSum: "",
+        product: "Lasanha",
+        path: "imagens/lasanha.jpg",
+        description: "Lorem ipsum dolor sit amet consectetur, adipisicing elit.",
+        price: 2,
     },
     {
         id: 4,
-        Product: "Uva",
-        Price: 3,
-        Quantity: 3,
-        Unit: "Caixas",
-        QttLower: "",
-        QttSum: "",
+        product: "Lasanha",
+        path: "imagens/lasanha.jpg",
+        description: "Lorem ipsum dolor sit amet consectetur, adipisicing elit.",
+        price: 2,
     },
     {
         id: 5,
-        Product: "Morango",
-        Price: 10,
-        Quantity: 1,
-        Unit: "Bandejas",
+        product: "Lasanha",
+        path: "imagens/lasanha.jpg",
+        description: "Lorem ipsum dolor sit amet consectetur, adipisicing elit.",
+        price: 2,
     },
     
     /*{
-        Product: "",
+        product: "",
         Emoji: "",
-        Price: 0,
+        price: 0,
         Quantity: 0,
         Unit: "",
     },*/
 ];
 
 
-
+// ${list.product}:
 
 //Mostra todos os Produtos, valores e cria os botões
 const ShowProdutcNames = (users) => {
@@ -70,15 +63,18 @@ const ShowProdutcNames = (users) => {
 
         ShoppingBag.innerHTML += (`
 
-        ${list.Product}:
+        <section class="card">
+            <div class="divFoto">
+                <img src="${list.path}" alt="" class="foto">
+            </div>
 
-        ${list.Quantity}
-       
-        <hr>
+            <div class="prato">
+                <h2>${list.product} - R$ ${list.price}</h2>
+                <p>${list.description}</p>
+            </div>
+        </section>
 
         `)
-
-
 
     });
 }
@@ -107,7 +103,6 @@ function loadTheme() {
     toggleDarkMode();
   }
 }
-
 loadTheme();
 
 changeThemeBtn.addEventListener("change", function () {
